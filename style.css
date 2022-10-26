@@ -280,6 +280,10 @@ header>nav>ul>li>a:hover, .contact>li>a>i:hover {
         overflow: hidden;
     }
 
+    .left h1{
+        font-size: 4rem;
+    }
+
     .right{
         margin-top: 75px;
     }
