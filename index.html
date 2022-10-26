@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oseias Lopes</title>
+    <script src="https://kit.fontawesome.com/3d294240d4.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circle"></div>
+    <a href="#welcome"><i class="fa-solid fa-caret-up" id="to_top"></i></a>
+    <header>
+
+        <img src="img/logo.png" alt="logo">
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Sobre</a>
+                    <a href="">Projetos</a>
+                    <a href="">Experiências</a>
+                    <a href="">Testemunhas</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="contact">
+            <li><a href="https://facebook.com/OseiasYC" target="_blank">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </a>
+                <a href="https://github.com/OseiasYC" target="_blank">
+                    <i class="fa-brands fa-github-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/OseiasYC/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:Oseias.YC@gmail.com" target="_blank">
+                    <i class="fa-solid fa-square-envelope"></i>
+                </a></li>
+        </ul>
+
+        <label for="globe" onclick="language()" class="globe">
+            <input type="checkbox" class="checkbox" id="globe"/>
+            <span><i class="fa-solid fa-earth-americas"></i></i></i></span>
+        </label>
+
+        <label for="bars" onclick="nav()">
+            <input type="checkbox" class="checkbox" id="bars"/>
+            <span class="hamburguer"><i class="fa-solid fa-bars"></i></span>
+        </label>
+
+    </header>
+    <main>
+
+        <section id="welcome">
+            <article class="left">
+                <h1>Olá, mundo! Prazer, <span id="name"><br>Oseias Lopes</span>.</h1>
+                <h2>Um jovem estudante metamorfo, fascinado por Tecnologia, Programação e Design. Graduando em <span style="color:var(--pink)">Engenharia de Software</span>.</h2>
+
+                <div class="work">
+                    <button onclick="window.location.href='page2.html'">Baixar CV</button>
+                </div>
+            </article>
+
+            <article class="right">
+                <img src="img/oseias.png" alt="Oseias Lopes">
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>

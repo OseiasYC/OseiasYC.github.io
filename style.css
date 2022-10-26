@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+:root {
+    --purple: #c64dff;
+    --sPurple: #9929ea;
+    --tPurple: #6802ff;
+    --pink: #ff66cc;
+    --b1: #333445;
+    --b2: #262333;
+    --b3: #17141D;
+}
+
+/*HTML Base*/
+html {
+    background-color: var(--b3);
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: var(--b2);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--b2);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--purple);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tPurple);
+}
+
+.circle {
+    top: 0;
+    right: 0;
+    position: absolute;
+    clip-path: circle(65% at 70% 35%);
+    z-index: -1;
+    width: 325px;
+    height: 325px;
+    background-color: var(--b2);
+}
+
+#to_top {
+    z-index: 1;
+    right: 50px;
+    bottom: 50px;
+    position: fixed;
+    font-size: 45px;
+    color: white;
+    transform: translateY(-10px);
+    transition: all 500ms ease;
+}
+
+#to_top:hover {
+    color: var(--sPurple);
+    transform: translateY(-20px);
+    transition: all 500ms ease;
+}
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1026px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.checkbox, .hamburguer{
+    display: none;
+}
+
+label{
+    color: gray;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transform: translateY(0px);
+    transition: all 200ms ease;
+}
+
+.globe:hover{
+    color: white;
+    transform: translateY(-3px);
+    transition: all 200ms ease;
+}
+
+#globe:checked + span{
+    color: var(--sPurple);
+}
+
+ul{
+    padding: 0;
+}
+
+ul>li{
+    display: flex;
+    list-style-type: none;
+}
+
+ul>li>a{
+    color: white;
+    font-family: 'Karla', sans-serif;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    transform: translateY(0px);
+    transition: all 200ms ease;
+}
+
+header>img{
+    width: 50px;
+    height: 50px;
+}
+
+header>nav>ul>li, header>nav>ul{
+    color: white;
+    min-width: 450px;
+    justify-content: space-evenly;
+}
+
+header>nav>ul>li>a:hover, .contact>li>a>i:hover{
+    color: var(--sPurple);
+    transform: translateY(-2px);
+    transition: all 200ms ease;
+}
+
+.contact{
+    min-width: 175px; 
+}
+
+.contact>li{
+    justify-content: space-evenly;
+}
+
+.contact>li>a>i{
+    font-size: 1.5rem;
+}
+
+/*#Welcome*/
+main{
+    max-width: 1026px;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#welcome{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section{
+    display: flex;
+}
+
+.work{
+    display: flex;
+    font-size: 1rem;
+    height: 50px;
+    color: white;
+    font-family: 'Karla', sans-serif;
+}
+.work::after{
+    content:'Not open to Work';
+    padding: 15px 25px 10px 35px;
+    margin: 0px 0px 0px -25px;
+    z-index: -1;
+    height: auto;
+    border-radius: 0% 50px 50px 0%;
+    background-color: var(--b1);
+}
+
+button{
+    cursor: pointer;
+    background-color: var(--b3);
+    border-radius: 0% 50px 50px 0%;
+    padding: 15px 30px 15px 25px;
+    border-color: var(--pink);
+    color: var(--pink);
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: var(--pink);
+    color: white;
+}
+
+.left{
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 10px;
+}
+
+.left>h1{
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    max-width: 425px;
+    font-size: 4.375rem;
+    line-height: 65px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+@keyframes textclip {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#name {
+    background: linear-gradient(90deg, var(--pink) 0%, var(--tPurple) 100%);
+    animation: textclip 2.5s linear infinite;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.left>h2 {
+    font-size: 1.25rem;
+    max-width: 450px;
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    color: white;
+    font-weight: 100;
+    padding: 25px 0px;
+}
+
+.right{
+    max-width: 525px;
+    display: flex;
+    align-items: center;
+}
+
+.right>img{
+    width: 100%;
+}
