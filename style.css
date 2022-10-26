@@ -141,7 +141,6 @@ main {
 
 #welcome {
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 section {
@@ -253,6 +252,7 @@ header>nav>ul>li>a:hover, .contact>li>a>i:hover {
     max-width: 525px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .right>img {
@@ -274,8 +274,18 @@ header>nav>ul>li>a:hover, .contact>li>a>i:hover {
         display: block;
     }
 
+    #welcome{
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+
     .right{
         margin-top: 75px;
+    }
+
+    .right>img{
+        width: 95%;
     }
 
 }
