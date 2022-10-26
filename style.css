@@ -8,7 +8,7 @@
     --pink: #ff66cc;
     --b1: #333445;
     --b2: #262333;
-    --b3: #17141D;
+    --b3: #17141d;
 }
 
 /*HTML Base*/
@@ -25,6 +25,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar {
     width: 12px;
+    height: 0px;
     background-color: var(--b2);
 }
 
@@ -67,7 +68,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /*Header*/
-header{
+header {
     display: flex;
     justify-content: space-evenly;
     max-width: 1026px;
@@ -77,11 +78,12 @@ header{
     align-items: center;
 }
 
-.checkbox, .hamburguer{
+.checkbox,
+.hamburguer {
     display: none;
 }
 
-label{
+label {
     color: gray;
     font-size: 1.5rem;
     cursor: pointer;
@@ -89,28 +91,28 @@ label{
     transition: all 200ms ease;
 }
 
-.globe:hover{
+.globe:hover {
     color: white;
     transform: translateY(-3px);
     transition: all 200ms ease;
 }
 
-#globe:checked + span{
+#globe:checked + span {
     color: var(--sPurple);
 }
 
-ul{
+ul {
     padding: 0;
 }
 
-ul>li{
+ul>li {
     display: flex;
     list-style-type: none;
 }
 
-ul>li>a{
+ul>li>a {
     color: white;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     text-decoration: none;
     font-size: large;
     font-weight: 500;
@@ -118,61 +120,43 @@ ul>li>a{
     transition: all 200ms ease;
 }
 
-header>img{
+header>img {
     width: 50px;
     height: 50px;
 }
 
-header>nav>ul>li, header>nav>ul{
+header>nav>ul>li, header>nav>ul {
     color: white;
     min-width: 450px;
     justify-content: space-evenly;
 }
 
-header>nav>ul>li>a:hover, .contact>li>a>i:hover{
-    color: var(--sPurple);
-    transform: translateY(-2px);
-    transition: all 200ms ease;
-}
-
-.contact{
-    min-width: 175px; 
-}
-
-.contact>li{
-    justify-content: space-evenly;
-}
-
-.contact>li>a>i{
-    font-size: 1.5rem;
-}
-
 /*#Welcome*/
-main{
+main {
     max-width: 1026px;
     margin-top: 75px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#welcome{
+#welcome {
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-section{
+section {
     display: flex;
 }
 
-.work{
+.work {
     display: flex;
     font-size: 1rem;
     height: 50px;
     color: white;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
 }
-.work::after{
-    content:'Not open to Work';
+.work::after {
+    content: "Fechado a trabalho";
     padding: 15px 25px 10px 35px;
     margin: 0px 0px 0px -25px;
     z-index: -1;
@@ -181,7 +165,7 @@ section{
     background-color: var(--b1);
 }
 
-button{
+button {
     cursor: pointer;
     background-color: var(--b3);
     border-radius: 0% 50px 50px 0%;
@@ -191,12 +175,12 @@ button{
     font-size: 1rem;
 }
 
-button:hover{
+button:hover {
     background-color: var(--pink);
     color: white;
 }
 
-.left{
+.left {
     max-width: 450px;
     display: flex;
     flex-wrap: wrap;
@@ -204,8 +188,8 @@ button:hover{
     padding: 10px;
 }
 
-.left>h1{
-    font-family: 'PT Sans', sans-serif;
+.left > h1 {
+    font-family: "PT Sans", sans-serif;
     color: white;
     max-width: 425px;
     font-size: 4.375rem;
@@ -236,22 +220,62 @@ button:hover{
     text-fill-color: transparent;
 }
 
-.left>h2 {
+.left > h2 {
     font-size: 1.25rem;
     max-width: 450px;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     margin: 0;
     color: white;
     font-weight: 100;
     padding: 25px 0px;
 }
 
-.right{
+header>nav>ul>li>a:hover, .contact>li>a>i:hover {
+    color: var(--sPurple);
+    transform: translateY(-2px);
+    transition: all 200ms ease;
+}
+
+.contact {
+    min-width: 300px;
+    margin-top: 35px;
+}
+
+.contact>li {
+    justify-content: space-between;
+}
+
+.contact>li>a>i {
+    font-size: 2rem;
+}
+
+.right {
     max-width: 525px;
     display: flex;
     align-items: center;
 }
 
-.right>img{
+.right>img {
     width: 100%;
+}
+
+/*Queries:*/
+@media screen and (max-width: 768px) {
+    header{
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    nav, contact, #to_top {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .right{
+        margin-top: 75px;
+    }
+
 }

@@ -8,12 +8,12 @@
     <script src="https://kit.fontawesome.com/3d294240d4.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="circle"></div>
     <a href="#welcome"><i class="fa-solid fa-caret-up" id="to_top"></i></a>
     <header>
-
         <img src="img/logo.png" alt="logo">
 
         <nav>
@@ -23,12 +23,34 @@
                     <a href="">Projetos</a>
                     <a href="">Experiências</a>
                     <a href="">Testemunhas</a>
-                </li>
+                </li> 
             </ul>
         </nav>
 
-        <ul class="contact">
-            <li><a href="https://facebook.com/OseiasYC" target="_blank">
+        <label for="globe" onclick="language()" class="globe">
+            <input type="checkbox" class="checkbox" id="globe"/>
+            <span><i class="fa-solid fa-earth-americas"></i></span>
+        </label>
+
+        <label for="bars" onclick="nav()">
+            <input type="checkbox" class="checkbox" id="bars"/>
+            <span class="hamburguer"><i class="fa-solid fa-bars"></i></span>
+        </label>
+
+    </header>
+
+    <main>
+        <section id="welcome">
+            <article class="left" data-aos="fade-right" data-aos-duration="2000">
+                <h1>Olá, mundo! Prazer, <span id="name"><br>Oseias Lopes</span>.</h1>
+                <h2>Estudante-metamorfo, fascinado por Tecnologia, Programação e Design. Graduando em <span style="color:var(--pink)">Engenharia de Software</span>.</h2>
+
+                <div class="work">
+                    <button onclick="window.location.href='page2.html'">Baixar CV</button>
+                </div>
+
+                <ul class="contact">
+                    <li><a href="https://facebook.com/OseiasYC" target="_blank">
                     <i class="fa-brands fa-facebook-square"></i>
                 </a>
                 <a href="https://github.com/OseiasYC" target="_blank">
@@ -40,36 +62,16 @@
                 <a href="mailto:Oseias.YC@gmail.com" target="_blank">
                     <i class="fa-solid fa-square-envelope"></i>
                 </a></li>
-        </ul>
-
-        <label for="globe" onclick="language()" class="globe">
-            <input type="checkbox" class="checkbox" id="globe"/>
-            <span><i class="fa-solid fa-earth-americas"></i></i></i></span>
-        </label>
-
-        <label for="bars" onclick="nav()">
-            <input type="checkbox" class="checkbox" id="bars"/>
-            <span class="hamburguer"><i class="fa-solid fa-bars"></i></span>
-        </label>
-
-    </header>
-    <main>
-
-        <section id="welcome">
-            <article class="left">
-                <h1>Olá, mundo! Prazer, <span id="name"><br>Oseias Lopes</span>.</h1>
-                <h2>Um jovem estudante metamorfo, fascinado por Tecnologia, Programação e Design. Graduando em <span style="color:var(--pink)">Engenharia de Software</span>.</h2>
-
-                <div class="work">
-                    <button onclick="window.location.href='page2.html'">Baixar CV</button>
-                </div>
+                </ul>
             </article>
 
-            <article class="right">
+            <article class="right" data-aos="fade-up-left" data-aos-duration="1500">
                 <img src="img/oseias.png" alt="Oseias Lopes">
             </article>
-
         </section>
     </main>
+    
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
