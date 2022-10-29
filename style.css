@@ -15,6 +15,7 @@
 html {
     background-color: var(--b3);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar-track {
@@ -57,6 +58,8 @@ main {
 
 section {
     display: flex;
+    align-content: center;
+    position: relative;
 }
 
 header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
@@ -66,9 +69,14 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 }
 
 .main{
-    max-width: 1026px;
+    max-width: 1025px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.element{
+    position: absolute;
+    z-index: -1;
 }
 
 .background{
@@ -133,7 +141,7 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 header {
     display: flex;
     justify-content: space-around;
-    max-width: 1026px;
+    max-width: 1025px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
@@ -186,39 +194,6 @@ header>nav>ul>li, header>nav>ul {
 }
 
 /*#Welcome*/
-
-#welcome>.left>div {
-    display: flex;
-    font-size: 1rem;
-    height: 50px;
-    color: white;
-    font-family: "Karla", sans-serif;
-}
-#welcome>.left>div::after {
-    content: "Fechado a trabalho";
-    padding: 15px 25px 10px 35px;
-    margin: 0px 0px 0px -25px;
-    z-index: -1;
-    height: auto;
-    border-radius: 0% 50px 50px 0%;
-    background-color: var(--b1);
-}
-
-#welcome>.left>div>button {
-    cursor: pointer;
-    background-color: var(--b3);
-    border-radius: 0% 50px 50px 0%;
-    padding: 15px 30px 15px 25px;
-    border-color: var(--pink);
-    color: var(--pink);
-    font-size: 1rem;
-}
-
-#welcome>.left>div>button:hover {
-    background-color: var(--pink);
-    color: white;
-}
-
 #welcome>.left {
     max-width: 450px;
     display: flex;
@@ -269,8 +244,41 @@ header>nav>ul>li, header>nav>ul {
     padding: 25px 0px;
 }
 
+#welcome>.left>div {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    height: 50px;
+    color: white;
+    font-family: "Karla", sans-serif;
+}
+#welcome>.left>div::after {
+    content: "Fechado a trabalho";
+    padding: 15px 25px 15px 35px;
+    margin: 0px 0px 0px -25px;
+    z-index: -1;
+    height: auto;
+    border-radius: 0% 50px 50px 0%;
+    background-color: var(--b1);
+}
+
+#welcome>.left>div>button {
+    cursor: pointer;
+    background-color: var(--b3);
+    border-radius: 0% 50px 50px 0%;
+    padding: 15px 30px 15px 25px;
+    border-color: var(--pink);
+    color: var(--pink);
+    font-size: 1rem;
+}
+
+#welcome>.left>div>button:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
 #welcome>.left>.contact {
-    max-width: 18.75rem;
+    max-width: 300px;
     margin-top: 35px;
 }
 
@@ -296,27 +304,14 @@ header>nav>ul>li, header>nav>ul {
 
 /*#About:*/
 #about{
-    padding: 200px 0px 0px;
+    padding: 200px 0px 200px 0px;
     height: auto;
 }
 
-#about>.rocket>#rocket{
+#about>#rocket{
+    font-size: 600px;
     color: var(--b2);
-    position: absolute;
-    font-size: 640px;
-    transform: translate(-250px, 0px);
-}
-
-#about>article>.satellite{
-    color: var(--b2);
-    position: relative;
-    font-size: 320px;
-    float: right;
-    z-index: -1;
-}
-
-#about>article>.satellite>#satellite{
-    transform: translate(100px, -225px);
+    left: -200px;
 }
 
 #about>article {
@@ -341,13 +336,25 @@ header>nav>ul>li, header>nav>ul {
     text-decoration: none;
 }
 
+#about>#satellite{
+    color: var(--b2);
+    position: absolute;
+    font-size: 320px;
+    right: 0;
+    bottom: 0;
+}
+
 /*#Services:*/
 #services{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 75px 25px 100px 25px;
-    max-width: 1026px;
+    padding: 75px 25px 75px 25px;
+    max-width: 1025px;
+}
+
+#services>article, #services h1{
+    z-index: 1;
 }
 
 #services>article{
@@ -391,8 +398,16 @@ header>nav>ul>li, header>nav>ul {
     margin: 0 0 2rem 0;
 }
 
+#services>article>#desc{
+    color: white;
+    opacity: 0.25;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    margin-top: 55px;
+}
+
 /*Queries:*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
     header{
         justify-content: space-between;
         padding: 15px;
@@ -415,7 +430,6 @@ header>nav>ul>li, header>nav>ul {
     #welcome{
         flex-wrap: wrap;
         justify-content: center;
-        overflow: hidden;
         padding-bottom: 75px;
     }
 
@@ -435,9 +449,20 @@ header>nav>ul>li, header>nav>ul {
     #welcome>.right>img{
         width: 95%;
     }
+}
 
-    #about>article>.satellite>#satellite{
-        overflow: hidden;
-        transform: translate(0px, -200px);
+@media screen and (max-width: 400px) {
+    .title{
+        font-size: 2.25rem;
+        line-height: 2rem;
+    }
+
+    #about>#rocket{
+        font-size: 450px;
+        transform: translateX(25px);
+    }
+
+    #about>#satellite{
+        font-size: 275px;
     }
 }
