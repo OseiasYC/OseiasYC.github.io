@@ -22,8 +22,8 @@
             <ul>
                 <li>
                     <a href="#about">Sobre</a>
-                    <a href="#services">Projetos</a>
-                    <a href="">Serviços</a>
+                    <a href="">Projetos</a>
+                    <a href="#services">Serviços</a>
                     <a href="">FAQ</a>
                 </li>
             </ul>
@@ -44,7 +44,6 @@
                 <h1>Olá, mundo! Prazer, <br> <span>Oseias Lopes</span>.</h1>
                 <h2>Estudante-metamorfo, fascinado por Tecnologia, Programação e Design. Graduando em <span
                         style="color:var(--pink)">Engenharia de Software</span>.</h2>
-
                 <div>
                     <button onclick="window.location.href='page2.html'">Baixar CV</button>
                 </div>
@@ -72,7 +71,7 @@
         </section>
 
         <section id="about" class="main">
-            <div data-aos="fade-up-right" data-aos-duration="3000" class="element" id="rocket"><i class="fa-solid fa-rocket"></i></div>
+            <div class="element" id="rocket"><i class="fa-solid fa-rocket" data-aos="fade-up-right" data-aos-duration="3000"></i></div>
             <article data-aos="fade-up" data-aos-duration="2000">
                 <h2>Saudações!</h2>
                 <h1 class="title">Sou Oseias, bacharelando em Engenharia de Software.</h1>
@@ -86,46 +85,115 @@
             <div class="element" data-aos="fade-down-left" data-aos-duration="2000" id="satellite"><i class="fa-solid fa-satellite"></i></div>
         </section>
 
-        <div class="background">
-                    <section id="services" class="main">
-                        <h1 class="title" id="title" style="text-align: center;">Meus conhecimentos:</h1>
-                        <h2 class="subtitle">estudos e experiências</h2>
+        <div class="background" id="services">
+            <section id="why" class="main" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                <h1 class="title" id="title" style="text-align: center;">Por que eu?</h1>
+                <h2 class="subtitle">estudos e experiências</h2>
+                <div class="element" id="meteor"><i class="fa-solid fa-meteor" data-aos="fade-down-left" data-aos-duration="3000"></i></div>
+                <article>
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
                         <article>
-                            <div>
-                                <i class="fa-solid fa-globe"></i>
-                                <article>
-                                    <h1>Comunicação:</h1>
-                                    <p>Além do óbvio português nativo: eu falo e tenho muito contato com o inglês, sou intermediário na leitura, 
-                                    conversação e escrita.</p>
-                                </article>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-terminal"></i>
-                                <article>
-                                    <h1>Desenvolvimento:</h1>
-                                    <p>Às tendências, tecnologias sempre têm algo novo a ensinar. Meu foco principal é o leque Java para Desenvolvimento Web, Android, JUnit, DevOps etc. Estou disposto às novas descobertas.</p>
-                                </article>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-crop-simple"></i>
-                                <article>
-                                    <h1>UX/UI Design:</h1>
-                                    <p>Um misto da paixão às imagens, vídeos, fotografias, e prototipações. Eu as expresso com Figma, Adobe Creative Cloud e Front-End.</p>
-                                </article>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-code-fork"></i>
-                                <article>
-                                    <h1>Documentação & Versionamento:</h1>
-                                    <p>Tenho contato e práticas com muitas normas, o suficiente para ter autonomia. Git e formatação de documentos refletem minha precaução e organização.</p>
-                                </article>
-                            </div>
-                            <p id="desc">Pelo tempo e dever de me adaptar às novas tecnologias: temos aqui apenas os principais conhecimentos entre muitos,
-                            introdutórios ou outros não, eu sempre aprenderei algo novo deles. Vamos conversar? Contate-me.</p>
+                            <h1>Comunicação:</h1>
+                            <p>Além do óbvio português nativo: eu falo e tenho muito contato com o inglês, sou intermediário na leitura, 
+                            conversação e escrita.</p>
                         </article>
-                        <div class="background"></div>
-                    </section>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-terminal"></i>
+                        <article>
+                            <h1>Desenvolvimento:</h1>
+                            <p>Às tendências, tecnologias sempre têm algo novo a ensinar. Meu foco principal é o leque Java para Desenvolvimento Web, Android, JUnit, DevOps etc. Estou disposto às novas descobertas.</p>
+                        </article>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <article>
+                            <h1>UX/UI Design:</h1>
+                            <p>Um misto da paixão às imagens, vídeos, fotografias, e prototipações. Eu as expresso com Figma, Adobe Creative Cloud e Front-End.</p>
+                        </article>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code-fork"></i>
+                        <article>
+                            <h1>Documentação & Versionamento:</h1>
+                            <p>Tenho contato e práticas com muitas normas, o suficiente para ter autonomia. Git e formatação de documentos refletem minha precaução e organização.</p>
+                        </article>
+                    </div>
+                    <p id="desc">Acompanhe meu <span><a href="http://github.com/OseiasYC" target="_blank">Github</a></span> para ver algumas das minhas principais tecnologias de estudo e trabalho constante;
+                    introdutórios ou outros não, eu sempre aprenderei algo novo consigo.</p>
+                </article>
+            </section>
         </div>
+
+        <section id="friends" class="main" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+            <h1 class="title" id="title" style="text-align: center;">Depoimentos</h1>
+            <h2 class="subtitle">colegas e testemunhas</h2>
+            <article>
+                <div class="card" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="img/harrison.jpg" alt="harrison">
+                    <h1>Harrison Borges</h1>
+                    <h2>amigo</h2>
+                    <p>"As perguntas que Oseias soube me responder: me deram perspectivas que sequer passaram por minha cabeça. Quando ele sabe e assume a liderança: temos resultado".</p>
+                    <ul>
+                        <li><a href="https://github.com/HarrisonBorgess" target="_blank"><i class="fa-brands fa-github-square"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/harrisonborges" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="mailto:harrisonborges13@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="flip-left" data-aos-duration="2000">
+                    <img src="img/harrison.jpg" alt="harrison">
+                    <h1>Bruno Nogueira</h1>
+                    <h2>ex-professor</h2>
+                    <p>"As perguntas que Oseias soube me responder, me deram perspectivas que sequer passaram por minha cabeça. Quando
+                        ele sabe e assume a liderança: temos resultado."</p>
+                    <ul>
+                        <li><a href="https://github.com/HarrisonBorgess" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/harrisonborges" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="mailto:harrisonborges13@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="flip-left" data-aos-duration="3000">
+                    <img src="img/harrison.jpg" alt="harrison">
+                    <h1>Harrison Borges</h1>
+                    <h2>amigo</h2>
+                    <p>"As perguntas que Oseias soube me responder: me deram perspectivas que sequer passaram por minha cabeça. Quando
+                        ele sabe e assume a liderança: temos resultado."</p>
+                    <ul>
+                        <li><a href="https://github.com/HarrisonBorgess" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/harrisonborges" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="mailto:harrisonborges13@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <div class="bubble" style="left: -125px; top: 15%; width: 375px; height: 375px; background-color: var(--tPurple); animation: float 3s infinite alternate-reverse;"></div>
+            <div class="bubble" style="right: -50px; top: 60%; width: 300px; height: 300px; background-color: var(--pink); animation: float 6s infinite alternate-reverse;"></div>
+        </section>
+
+        <section id="companies" class="main">
+            <h1 class="title" id="title" style="text-align: center;">Empresas & Clientes</h1>
+            <h2 class="subtitle">meu histórico</h2>
+            <article>
+                <div class="company"><img src="img/companies/monsters-inc.png" alt=""></div>
+                <div class="company"><img src="img/companies/shield.png" alt=""></div>
+                <div class="company"><img src="img/companies/stark.png" alt=""></div>
+                <div class="company"><img src="img/companies/umbrella.png" alt=""></div>
+                <div class="company"><img src="img/companies/wayne.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+            </article>
+        </section>
     </main>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

@@ -18,6 +18,10 @@ html {
     overflow-x: hidden;
 }
 
+body{
+    margin: 0;
+}
+
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -26,7 +30,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar {
     width: 12px;
-    height: 0px;
     background-color: var(--b2);
 }
 
@@ -42,7 +45,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 ul {
     padding: 0;
-    width: 40rem;
+    min-width: 290px;
+    max-width: 640px;
 }
 
 ul>li {
@@ -59,6 +63,8 @@ main {
 section {
     display: flex;
     align-content: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -81,6 +87,7 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 
 .background{
     background-color: var(--b2);
+    margin: 75px 0px 75px 0px;
 }
 
 .circle {
@@ -96,7 +103,7 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 
 #to_top {
     z-index: 99;
-    right: 50px;
+    right: 100px;
     bottom: 50px;
     position: fixed;
     font-size: 45px;
@@ -134,7 +141,35 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
     font-size: 20px;
-    margin-top: 0;   
+    margin-top: 0;
+    z-index: 2;
+}
+
+.bubble{
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+}
+
+/*Animations:*/
+@keyframes textclip {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    } 100% {
+        transform: translateY(30px);
+    }
 }
 
 /*Header*/
@@ -202,6 +237,7 @@ header>nav>ul>li, header>nav>ul {
     padding: 10px;
 }
 
+
 #welcome>.left>h1 {
     font-family: "PT Sans", sans-serif;
     color: white;
@@ -210,18 +246,6 @@ header>nav>ul>li, header>nav>ul {
     line-height: 4rem;
     letter-spacing: 1px;
     margin: 0;
-}
-
-@keyframes textclip {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 #welcome>.left>h1>span {
@@ -254,7 +278,7 @@ header>nav>ul>li, header>nav>ul {
 }
 #welcome>.left>div::after {
     content: "Fechado a trabalho";
-    padding: 15px 25px 15px 35px;
+    padding: 16.5px 25px 16.5px 35px;
     margin: 0px 0px 0px -25px;
     z-index: -1;
     height: auto;
@@ -304,12 +328,12 @@ header>nav>ul>li, header>nav>ul {
 
 /*#About:*/
 #about{
-    padding: 200px 0px 200px 0px;
+    padding: 150px 0px 150px 0px;
     height: auto;
 }
 
 #about>#rocket{
-    font-size: 600px;
+    font-size: 700px;
     color: var(--b2);
     left: -200px;
 }
@@ -344,26 +368,36 @@ header>nav>ul>li, header>nav>ul {
     bottom: 0;
 }
 
-/*#Services:*/
-#services{
+/*#why:*/
+#why{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 75px 25px 75px 25px;
+    padding: 100px 25px 100px 25px;
     max-width: 1025px;
 }
 
-#services>article, #services h1{
+#why>#meteor{
     z-index: 1;
+    color: var(--b3);
+    position: absolute;
+    font-size: 650px;
+    left: 0;
+    top: 0;
+    transform: rotate(-100deg);
 }
 
-#services>article{
+#why>article, #why h1{
+    z-index: 2;
+}
+
+#why>article{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#services>article>div{
+#why>article>div{
     max-width: 450px;
     display: flex;
     align-items: baseline;
@@ -371,18 +405,18 @@ header>nav>ul>li, header>nav>ul {
     margin-right: 25px;
 }
 
-#services>article>div>article{
+#why>article>div>article{
     display: flex;
     flex-direction: column;
 }
 
-#services>article>div>i{
+#why>article>div>i{
     font-size: 1.5rem;
     color: var(--pink);
     margin-right: .5rem;
 }
 
-#services>article>div h1{
+#why>article>div h1{
     color: var(--pink);
     font-family: 'PT Sans', sans-serif;
     font-size: 1.5rem;
@@ -390,7 +424,7 @@ header>nav>ul>li, header>nav>ul {
     margin: 0 0 5px 0;
 }
 
-#services>article>div p{
+#why>article>div p{
     color: white;
     font-family: 'PT Sans', sans-serif;
     font-size: 1rem;
@@ -398,12 +432,134 @@ header>nav>ul>li, header>nav>ul {
     margin: 0 0 2rem 0;
 }
 
-#services>article>#desc{
-    color: white;
-    opacity: 0.25;
+#why>article>#desc{
+    color: rgba(255, 255, 255, 0.3);
     font-family: 'Karla', sans-serif;
     text-align: center;
     margin-top: 55px;
+}
+
+#why>article>#desc>span>a{
+    color: var(--pink);
+    opacity: 1;
+    text-decoration: none;
+    font-family: 'Karla', sans-serif;
+}
+
+/*Friends:*/
+#friends{
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 150px 0px;
+}
+
+#friends>article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#friends>article>.card {
+    width: 18rem;
+    height: 20rem;
+    padding: 10px;
+    margin: 10px;
+    background: rgba(51, 52, 69, .5);
+    border-radius: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#friends>article>.card>img{
+    width: 95px;
+    height: 95px;
+    border: solid white 3.5px;
+    border-radius: 50%;
+}
+
+#friends>article>.card h1{
+    font-weight: 600;
+    font-size: 1.35rem;
+    font-family: 'Karla', sans-serif;
+    margin: 5px 0px 0px 0px;
+    background: linear-gradient(90deg, var(--purple) 0%, var(--tPurple) 100%);
+    animation: textclip 2s linear infinite;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#friends>article>.card h2{
+    color: rgba(255, 255, 255, 0.3);
+    font-size: .85rem;
+    font-weight: 100;
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+}
+
+#friends>article>.card p{
+    font-family: 'Karla';
+    font-style: italic;
+    padding: 0px 10px 0px 10px;
+    font-size: .85rem;
+    text-align: center;
+    color: white;
+}
+
+#friends>article>.card>ul{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.65rem;
+    margin: 5px;
+}
+
+#friends>article>.card>ul>li>a{
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 200ms ease-in-out;
+}
+
+#friends>article>.card>ul>li>a:hover{
+    color: white;
+    transition: all 200ms ease-in-out;
+}
+
+/*Companies:*/
+#companies{
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#companies>article{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1px;
+    row-gap: 1px;
+    padding: 5px;
+    margin: 50px 0px;
+}
+
+#companies>article>.company{
+    background-color: var(--b2);
+    padding: 25px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#companies>article>.company:hover{
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+#companies>article>.company>img{
+    width: 100%;
+    opacity: .25;
 }
 
 /*Queries:*/
@@ -430,7 +586,11 @@ header>nav>ul>li, header>nav>ul {
     #welcome{
         flex-wrap: wrap;
         justify-content: center;
-        padding-bottom: 75px;
+        margin: 100px 0px 100px;
+    }
+
+    #welcome>.left{
+        margin-bottom: 100px;
     }
 
     #welcome>.left h1{
@@ -442,19 +602,49 @@ header>nav>ul>li, header>nav>ul {
         font-size: 2.3rem;
     }
 
+    #welcome>.left>.contact {
+    margin-top: 50px;
+}
+
     #welcome>.right{
-        margin-top: 75px;
+        margin: 100px 0px 100px 0px;
     }
 
     #welcome>.right>img{
         width: 95%;
     }
+
+    #about{
+        padding-top: 0px;
+    }
+
+    #companies>article{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5px;
+    }
+
+    #companies>article :last-child{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+        #companies>article :last-child>img{
+        width: 30%;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 445px) {
+    section{
+        overflow: hidden;
+    }
+
     .title{
-        font-size: 2.25rem;
-        line-height: 2rem;
+        font-size: 3rem;
+        line-height: 2.6rem;
+    }
+
+    #welcome>.right{
+        margin: 50px 0px 50px 0px;
     }
 
     #about>#rocket{
@@ -464,5 +654,29 @@ header>nav>ul>li, header>nav>ul {
 
     #about>#satellite{
         font-size: 275px;
+    }
+
+    #why>#meteor{
+        left: -75px;
+    }
+
+    #why>#meteor>i{
+        font-size: 300px;
+    }
+
+        #friends>article>.card{
+        max-width: 275px;
+    }
+        #companies>article{
+        grid-template-columns: 1fr 1fr;
+    }
+
+        #companies>article :last-child{
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+
+        #companies>article :last-child>img{
+        width: 95%;
     }
 }
