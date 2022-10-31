@@ -145,10 +145,41 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
     z-index: 2;
 }
 
+.paragraph{
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0 0 2rem 0;
+}
+
 .bubble{
     position: absolute;
     z-index: -1;
     border-radius: 100%;
+}
+
+/*Independents:*/
+.checkbox, .hamburguer {
+    display: none;
+}
+
+.globe, .hamburguer {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transform: translateY(0px);
+    transition: all 200ms ease;
+}
+
+.globe:hover {
+    color: var(--purple);
+    transform: translateY(-3px);
+    transition: all 200ms ease;
+}
+
+.checkbox:checked + .hamburguer>i{
+    color: var(--purple);
 }
 
 /*Animations:*/
@@ -205,31 +236,8 @@ header>nav>ul>li, header>nav>ul {
     justify-content: space-evenly;
 }
 
-/*Independents:*/
-.checkbox, .hamburguer {
-    display: none;
-}
-
-.globe, .hamburguer {
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transform: translateY(0px);
-    transition: all 200ms ease;
-}
-
-.globe:hover {
-    color: var(--purple);
-    transform: translateY(-3px);
-    transition: all 200ms ease;
-}
-
-.checkbox:checked + .hamburguer>i{
-    color: var(--purple);
-}
-
 /*#Welcome*/
-#welcome>.left {
+.left {
     max-width: 450px;
     display: flex;
     flex-wrap: wrap;
@@ -238,7 +246,7 @@ header>nav>ul>li, header>nav>ul {
 }
 
 
-#welcome>.left>h1 {
+.left>h1 {
     font-family: "PT Sans", sans-serif;
     color: white;
     max-width: 425px;
@@ -248,7 +256,7 @@ header>nav>ul>li, header>nav>ul {
     margin: 0;
 }
 
-#welcome>.left>h1>span {
+.left>h1>span {
     background: linear-gradient(90deg, var(--pink) 0%, var(--tPurple) 100%);
     animation: textclip 2.5s linear infinite;
     background-size: 200% auto;
@@ -258,7 +266,7 @@ header>nav>ul>li, header>nav>ul {
     text-fill-color: transparent;
 }
 
-#welcome>.left>h2 {
+.left>h2 {
     font-size: 1.25rem;
     max-width: 450px;
     font-family: "Karla", sans-serif;
@@ -268,7 +276,7 @@ header>nav>ul>li, header>nav>ul {
     padding: 25px 0px;
 }
 
-#welcome>.left>div {
+.left>div {
     display: flex;
     align-items: center;
     font-size: 1rem;
@@ -276,7 +284,7 @@ header>nav>ul>li, header>nav>ul {
     color: white;
     font-family: "Karla", sans-serif;
 }
-#welcome>.left>div::after {
+.left>div::after {
     content: "Fechado a trabalho";
     padding: 16.5px 25px 16.5px 35px;
     margin: 0px 0px 0px -25px;
@@ -286,7 +294,7 @@ header>nav>ul>li, header>nav>ul {
     background-color: var(--b1);
 }
 
-#welcome>.left>div>button {
+.left>div>button {
     cursor: pointer;
     background-color: var(--b3);
     border-radius: 0% 50px 50px 0%;
@@ -296,33 +304,33 @@ header>nav>ul>li, header>nav>ul {
     font-size: 1rem;
 }
 
-#welcome>.left>div>button:hover {
+.left>div>button:hover {
     background-color: var(--pink);
     color: white;
 }
 
-#welcome>.left>.contact {
+.contact {
     max-width: 300px;
     margin-top: 35px;
 }
 
-#welcome>.left>.contact>li {
+.contact>li {
     justify-content: space-between;
 }
 
-#welcome>.left>.contact>li>a>i {
+.contact>li>a>i {
     font-size: 2rem;
     color: white;
 }
 
-#welcome>.right {
+.right {
     max-width: 525px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#welcome>.right>img {
+.right>img {
     width: 100%;
 }
 
@@ -332,7 +340,7 @@ header>nav>ul>li, header>nav>ul {
     height: auto;
 }
 
-#about>#rocket{
+#rocket{
     font-size: 700px;
     color: var(--b2);
     left: -200px;
@@ -355,12 +363,12 @@ header>nav>ul>li, header>nav>ul {
     text-align: start;
 }
 
-#about>article>p>#letter>a {
+#letter>a {
     color: var(--pink);
     text-decoration: none;
 }
 
-#about>#satellite{
+#satellite{
     color: var(--b2);
     position: absolute;
     font-size: 320px;
@@ -368,7 +376,7 @@ header>nav>ul>li, header>nav>ul {
     bottom: 0;
 }
 
-/*#why:*/
+/*Why:*/
 #why{
     flex-direction: column;
     flex-wrap: wrap;
@@ -377,7 +385,7 @@ header>nav>ul>li, header>nav>ul {
     max-width: 1025px;
 }
 
-#why>#meteor{
+#meteor{
     z-index: 1;
     color: var(--b3);
     position: absolute;
@@ -424,22 +432,14 @@ header>nav>ul>li, header>nav>ul {
     margin: 0 0 5px 0;
 }
 
-#why>article>div p{
-    color: white;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    margin: 0 0 2rem 0;
-}
-
-#why>article>#desc{
+#desc{
     color: rgba(255, 255, 255, 0.3);
     font-family: 'Karla', sans-serif;
     text-align: center;
     margin-top: 55px;
 }
 
-#why>article>#desc>span>a{
+#desc>span>a{
     color: var(--pink);
     opacity: 1;
     text-decoration: none;
@@ -459,7 +459,7 @@ header>nav>ul>li, header>nav>ul {
     justify-content: space-evenly;
 }
 
-#friends>article>.card {
+.card {
     width: 18rem;
     height: 20rem;
     padding: 10px;
@@ -475,14 +475,14 @@ header>nav>ul>li, header>nav>ul {
     justify-content: center;
 }
 
-#friends>article>.card>img{
+.card>img{
     width: 95px;
     height: 95px;
     border: solid white 3.5px;
     border-radius: 50%;
 }
 
-#friends>article>.card h1{
+.card h1{
     font-weight: 600;
     font-size: 1.35rem;
     font-family: 'Karla', sans-serif;
@@ -496,7 +496,7 @@ header>nav>ul>li, header>nav>ul {
     text-fill-color: transparent;
 }
 
-#friends>article>.card h2{
+.card h2{
     color: rgba(255, 255, 255, 0.3);
     font-size: .85rem;
     font-weight: 100;
@@ -504,7 +504,7 @@ header>nav>ul>li, header>nav>ul {
     margin: 0;
 }
 
-#friends>article>.card p{
+.card p{
     font-family: 'Karla';
     font-style: italic;
     padding: 0px 10px 0px 10px;
@@ -513,19 +513,19 @@ header>nav>ul>li, header>nav>ul {
     color: white;
 }
 
-#friends>article>.card>ul{
+.card>ul{
     display: flex;
     justify-content: space-evenly;
     font-size: 1.65rem;
     margin: 5px;
 }
 
-#friends>article>.card>ul>li>a{
+.card>ul>li>a{
     color: rgba(255, 255, 255, 0.3);
     transition: all 200ms ease-in-out;
 }
 
-#friends>article>.card>ul>li>a:hover{
+.card>ul>li>a:hover{
     color: white;
     transition: all 200ms ease-in-out;
 }
@@ -546,20 +546,85 @@ header>nav>ul>li, header>nav>ul {
     margin: 50px 0px;
 }
 
-#companies>article>.company{
+.company{
     background-color: var(--b2);
     padding: 25px 10px;
     display: flex;
     justify-content: center;
 }
 
-#companies>article>.company:hover{
+.company:hover{
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
 }
 
-#companies>article>.company>img{
+.company>img{
     width: 100%;
     opacity: .25;
+}
+
+/*Projects*/
+#projects>section>article{
+    display: flex;
+}
+
+.arrow{
+    background-color:transparent;
+    border: transparent;
+}
+
+.arrow>i{
+    font-size: 3.25rem;
+    cursor: pointer;
+    color: white;
+    opacity: .25;
+    transition: all 300ms ease-in;
+}
+
+.arrow>i:hover{
+    opacity: 1;
+    transition: all 300ms ease-in;
+}
+
+.slider{
+    max-width: 46.875rem;
+    height: 28.125rem;
+    overflow: hidden;
+    display: flex;
+    background-color: var(--b3);
+}
+
+.slides{
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar{
+    display: none;
+}
+
+.slide{
+    width: fit-content;
+    display: flex;;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.pic{
+    width: 50%;
+}
+
+.pic>img{
+    width: 90%;
+}
+
+.tag{
+    width: 50%;
+    padding: 25px;
 }
 
 /*Queries:*/
@@ -589,28 +654,28 @@ header>nav>ul>li, header>nav>ul {
         margin: 100px 0px 100px;
     }
 
-    #welcome>.left{
+    .left{
         margin-bottom: 100px;
     }
 
-    #welcome>.left h1{
+    .left h1{
         font-size: 3.5rem;
         line-height: 3rem;
     }
 
-    #welcome>.left>.contact>li>a>i{
+    .contact>li>a>i{
         font-size: 2.3rem;
     }
 
-    #welcome>.left>.contact {
+    .contact {
     margin-top: 50px;
 }
 
-    #welcome>.right{
+    .right{
         margin: 100px 0px 100px 0px;
     }
 
-    #welcome>.right>img{
+    .right>img{
         width: 95%;
     }
 
@@ -628,8 +693,17 @@ header>nav>ul>li, header>nav>ul {
         grid-column-end: 4;
     }
 
-        #companies>article :last-child>img{
+    article :last-child>img{
         width: 30%;
+    }
+
+    .slide{
+        flex-direction: column;
+    }
+
+    .tag{
+        padding: 0px;
+        width: 95%;
     }
 }
 
