@@ -1,28 +1,29 @@
-var slides = document.querySelector(".slides");
-var slideSize = slides.children.length;
-var index = 0;
-
 //Slider buttons:
-function next() {
-    index++;
-    if (index >= slideSize) {
-        slides.scrollLeft -= slides*slideSize;
-        index = 0;
-    }else{
-        slides.scrollLeft += slides.clientWidth;
-    }
-    console.log(index);
-}
-function previous() {
-    index--;
-    if (index <= 0) {
-        slides.scrollLeft += slides.clientWidth*slideSize;
-        index = 0;
-    }else{
-        slides.scrollLeft -= slides.clientWidth;
-    }
-    console.log(index);
-}
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+  // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+  // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    loop: true,
+
+    autoplay: {
+        delay: 5000,
+    },
+
+    direction: 'horizontal',
+
+});
 
 //Animate on scroll:
 AOS.init();

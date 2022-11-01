@@ -30,7 +30,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar {
     width: 12px;
-    background-color: var(--b2);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -150,7 +149,7 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
     font-family: 'PT Sans', sans-serif;
     font-size: 1rem;
     font-weight: 300;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
 }
 
 .bubble{
@@ -180,6 +179,21 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 
 .checkbox:checked + .hamburguer>i{
     color: var(--purple);
+}
+
+.left>div>button:hover, .tag>button:hover {
+    background-color: var(--pink);
+    color: white;
+    cursor: pointer;
+}
+
+#services>section, #projects>section, #faq{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px 25px 100px 25px;
+    max-width: 1025px;
 }
 
 /*Animations:*/
@@ -295,18 +309,12 @@ header>nav>ul>li, header>nav>ul {
 }
 
 .left>div>button {
-    cursor: pointer;
     background-color: var(--b3);
     border-radius: 0% 50px 50px 0%;
     padding: 15px 30px 15px 25px;
     border-color: var(--pink);
     color: var(--pink);
     font-size: 1rem;
-}
-
-.left>div>button:hover {
-    background-color: var(--pink);
-    color: white;
 }
 
 .contact {
@@ -358,7 +366,7 @@ header>nav>ul>li, header>nav>ul {
 
 #about>article>p {
     font-family: 'Karla', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: white;
     text-align: start;
 }
@@ -376,15 +384,7 @@ header>nav>ul>li, header>nav>ul {
     bottom: 0;
 }
 
-/*Why:*/
-#why{
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 100px 25px 100px 25px;
-    max-width: 1025px;
-}
-
+/*Services:*/
 #meteor{
     z-index: 1;
     color: var(--b3);
@@ -395,17 +395,17 @@ header>nav>ul>li, header>nav>ul {
     transform: rotate(-100deg);
 }
 
-#why>article, #why h1{
+#services>section>article, #services>section h1{
     z-index: 2;
 }
 
-#why>article{
+#services>section>article{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#why>article>div{
+#services>section>article>div{
     max-width: 450px;
     display: flex;
     align-items: baseline;
@@ -413,18 +413,18 @@ header>nav>ul>li, header>nav>ul {
     margin-right: 25px;
 }
 
-#why>article>div>article{
+#services>section>article>div>article{
     display: flex;
     flex-direction: column;
 }
 
-#why>article>div>i{
+#services>section>article>div>i{
     font-size: 1.5rem;
     color: var(--pink);
     margin-right: .5rem;
 }
 
-#why>article>div h1{
+#services>section>article>div h1{
     color: var(--pink);
     font-family: 'PT Sans', sans-serif;
     font-size: 1.5rem;
@@ -460,7 +460,7 @@ header>nav>ul>li, header>nav>ul {
 }
 
 .card {
-    width: 18rem;
+    max-width: 290px;
     height: 20rem;
     padding: 10px;
     margin: 10px;
@@ -565,70 +565,167 @@ header>nav>ul>li, header>nav>ul {
 /*Projects*/
 #projects>section>article{
     display: flex;
-}
-
-.arrow{
-    background-color:transparent;
-    border: transparent;
-}
-
-.arrow>i{
-    font-size: 3.25rem;
-    cursor: pointer;
-    color: white;
-    opacity: .25;
-    transition: all 300ms ease-in;
-}
-
-.arrow>i:hover{
-    opacity: 1;
-    transition: all 300ms ease-in;
-}
-
-.slider{
-    max-width: 46.875rem;
-    height: 28.125rem;
-    overflow: hidden;
-    display: flex;
-    background-color: var(--b3);
-}
-
-.slides{
-    overflow-x: scroll;
-    scroll-snap-type: mandatory;
-    display: flex;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-}
-
-.slides::-webkit-scrollbar{
-    display: none;
-}
-
-.slide{
-    width: fit-content;
-    display: flex;;
-    justify-content: center;
-    align-self: center;
+    width: 100%;
     align-items: center;
-    flex-shrink: 0;
+    margin: 45px 0px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 100px;
+}
+
+.swiper-pagination-bullet{
+    background-color:  rgba(255, 255, 255, 0.3);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--sPurple);
+}
+
+.swiper-button, .swiper-button>i{
+    color: rgba(255, 255, 255, 0.3);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 200ms ease-in-out;
+}
+
+.swiper-button>i:hover{
+    color: var(--sPurple);
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pic{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.pic>img{
+.pic img{
     width: 90%;
+    border-radius: 10px;
 }
 
 .tag{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     width: 50%;
-    padding: 25px;
+    padding-right: 50px;
+}
+
+.tag>h1{
+    font-size: 2.25rem;
+    margin-bottom: 0;
+    font-family: 'PT-Sans', sans-serif;
+    color: var(--pink);
+}
+
+.tag>button{
+    font-family: 'Karla', sans-serif;
+    font-size: .95rem;
+    width: 10rem;
+    height: 50px;
+    color: var(--pink);
+    border: solid 2px var(--pink);
+    border-radius: 0% 50px 50px 0%;
+    background: transparent;
+}
+
+.tag>button>i{
+    margin-left: 10px;
+}
+
+/*FAQ:*/
+#faq>article{
+    max-width: 850px;
+    margin: 45px 0px;
+}
+
+.tab {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    font-family: 'PT-Sans', sans-serif;
+}
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab label {
+    font-size: 1.2rem;
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    background: var(--b2);
+    line-height: 3;
+    cursor: pointer;
+}
+
+.tab-content {
+    font-family: 'Karla', sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--b1);
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+}
+
+.tab-content p {
+    font-size: 1.1rem;
+    margin: 1.5rem;
+}
+
+.tab input:checked ~ .tab-content {
+    max-height: 100vh;
+}
+
+.tab label::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 3em;
+    height: 3em;
+    line-height: 3;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+.tab input[type=checkbox] + label::after {
+    content: "+";
+}
+.tab input[type=radio] + label::after {
+    content: "\25BC";
+}
+.tab input[type=checkbox]:checked + label::after {
+    transform: rotate(315deg);
+}
+.tab input[type=radio]:checked + label::after {
+    transform: rotateX(180deg);
 }
 
 /*Queries:*/
 @media screen and (max-width: 770px) {
+    section{
+        overflow: hidden;
+    }
+
     header{
         justify-content: space-between;
         padding: 15px;
@@ -683,6 +780,14 @@ header>nav>ul>li, header>nav>ul {
         padding-top: 0px;
     }
 
+    #rocket{
+        font-size: 600px;
+    }
+
+    #satellite{
+        font-size: 225px;
+    }
+
     #companies>article{
         grid-template-columns: repeat(3, 1fr);
         padding: 5px;
@@ -693,28 +798,37 @@ header>nav>ul>li, header>nav>ul {
         grid-column-end: 4;
     }
 
-    article :last-child>img{
-        width: 30%;
-    }
-
-    .slide{
+    .swiper-slide{
         flex-direction: column;
     }
 
-    .tag{
-        padding: 0px;
-        width: 95%;
+    .pic{
+        width: 100%;
+    }
+
+    .tag {
+    width: 90%;
+    padding-right: 0px;
+    }
+
+    .tab label {
+        font-size: 17px;
     }
 }
 
-@media screen and (max-width: 445px) {
+@media screen and (max-width: 376px) {
+    #welcome{
+        margin: 0;
+    }
+
     section{
         overflow: hidden;
     }
 
     .title{
-        font-size: 3rem;
-        line-height: 2.6rem;
+        font-size: 2rem;
+        line-height: 2.25rem;
+        padding: 0;
     }
 
     #welcome>.right{
@@ -730,12 +844,16 @@ header>nav>ul>li, header>nav>ul {
         font-size: 275px;
     }
 
-    #why>#meteor{
+    #services>section>#meteor{
         left: -75px;
     }
 
-    #why>#meteor>i{
+    #services>section>#meteor>i{
         font-size: 300px;
+    }
+
+    #services>section>article>div{
+        flex-direction: column;
     }
 
         #friends>article>.card{
@@ -753,4 +871,16 @@ header>nav>ul>li, header>nav>ul {
         #companies>article :last-child>img{
         width: 95%;
     }
+
+    .swiper-button{
+        display: none;
+    }
+
+    .tab label {
+        font-size: 14px;
+    }
+
+    .tab-content p {
+    font-size: .75rem;
+}
 }
