@@ -782,12 +782,46 @@ header>nav>ul>li, header>nav>ul {
         padding: 15px;
     }
 
+    label{
+        z-index: 1;
+    }
+
+    nav{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+    }
+
+    header>nav>ul>li {
+        position: absolute;
+        min-width: 200px;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background: rgba(38, 35, 51, 0.35);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(13.5px);
+        z-index: 1;
+    }
+
+    header>nav>ul>li>a{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+
     .title{
         font-size: 3rem;
         padding: 0.4rem;
     }
 
-    nav, #to_top {
+    #to_top {
         display: none;
     }
 
