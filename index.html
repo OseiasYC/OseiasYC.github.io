@@ -25,9 +25,9 @@
             <ul>
                 <li>
                     <a href="#about">Sobre</a>
-                    <a href="#projects">Projetos</a>
-                    <a href="#services">Serviços</a>
-                    <a href="">FAQ</a>
+                    <a href="#projects">Projetos</a>                   
+                    <a href="#contact">Contato</a>
+                    <a href="#faq">FAQ</a>
                 </li>
             </ul>
         </nav>
@@ -229,7 +229,7 @@
         <div class="background" id="projects">
             <section class="main">
                 <h1 class="title" id="title" style="text-align: center;">Meus projetos</h1>
-                <h2 class="subtitle">portifólio</h2>
+                <h2 class="subtitle">portfólio</h2>
                 <article>
                     <button onclick="swiper.slidePrev()" class="swiper-button"><i
                             class="fa-solid fa-caret-left"></i></button>
@@ -238,7 +238,7 @@
                             <div class="swiper-slide">
                                 <div class="pic"><img src="img/projects/portfolio.png" alt=""></div>
                                 <div class="tag">
-                                    <h1>Meu portifólio</h1>
+                                    <h1>Meu portfólio</h1>
                                     <h2 class="subtitle">HTML, CSS e JS</h2>
                                     <p class="paragraph">Idealizado durante muito tempo e após 3 versões de teste e
                                         estudos: você está num projeto vanilla atualizado e autoral.</p>
@@ -334,11 +334,39 @@
                                 <p>Terminar os estudos com um doutorado, trabalhando com automações industriais ou DevOps fora do país (Canadá) para melhorar meus idiomas. Ou trabalhar para a Polícia Federal ou agência de inteligência brasileira.</p>
                             </div>
                         </div>
+
+                        <div class="tab">
+                            <input id="tab-seven" type="checkbox" name="tabs">
+                            <label for="tab-seven">O que você procura no emprego?</label>
+                            <div class="tab-content">
+                                <p>Se eu estou "open to work", atualmente, eu estou buscando uma oportunidade de estágio presencial em Salvador-BA, ou podemos negociar algo.</p>
+                            </div>
+                        </div>
                     </div>
+            </article>
+        </section>
+
+        <section id="contact" class="main">
+            <h1 class="title">Contate-me</h1>
+            <p class="subtitle">envia um email!</p>
+            <article>
+                <form action="https://formsubmit.co/Oseias.YC@gmail.com" method="POST">
+                    <input type="text" name="name" required  placeholder="Nome" id="name">
+                    <input type="email" name="email" required placeholder="E-mail" id="email">
+                    <input type="subject" name="_subject" placeholder="Assunto" id="subject">
+                    <textarea name="message" id="text" placeholder="Mensagem"></textarea>
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" value="https://OseiasYC.github.io">
+                    <button type="submit" id="submit">Enviar</button>
+                </form>
+                <img src="img/laptop.png" alt="laptop">
             </article>
         </section>
     </main>
 
+    <footer>
+        <h1>teste</h1>
+    </footer>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>

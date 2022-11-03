@@ -181,7 +181,7 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
     color: var(--purple);
 }
 
-.left>div>button:hover, .tag>button:hover {
+.left>div>button:hover, .tag>button:hover, #submit:hover {
     background-color: var(--pink);
     color: white;
     cursor: pointer;
@@ -567,7 +567,7 @@ header>nav>ul>li, header>nav>ul {
     display: flex;
     width: 100%;
     align-items: center;
-    margin: 45px 0px;
+    margin: 75px 0px;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal{
@@ -582,7 +582,7 @@ header>nav>ul>li, header>nav>ul {
     background-color: var(--sPurple);
 }
 
-.swiper-button, .swiper-button>i{
+.swiper-button, .swiper-button>i, #submit{
     color: rgba(255, 255, 255, 0.3);
     background: transparent;
     border: none;
@@ -629,7 +629,7 @@ header>nav>ul>li, header>nav>ul {
     color: var(--pink);
 }
 
-.tag>button{
+.tag>button, #submit{
     font-family: 'Karla', sans-serif;
     font-size: .95rem;
     width: 10rem;
@@ -719,6 +719,57 @@ header>nav>ul>li, header>nav>ul {
 .tab input[type=radio]:checked + label::after {
     transform: rotateX(180deg);
 }
+
+/*Contact:*/
+#contact{
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+#contact>article{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact>article>form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    min-width: 300px;
+    margin: 15px;
+}
+
+#name, #email, #subject, #text{
+    color: white;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--b2);
+    border: none;
+    padding: 15px;
+    margin: 5px 0px;
+    height: 2rem;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+#text{
+    min-height: 10rem;
+}
+
+#submit{
+    width: 30%;
+    height: 3rem;
+    margin: 5px 0px;
+}
+
+#contact>article>img{
+    width: 50%;
+}
+
 
 /*Queries:*/
 @media screen and (max-width: 770px) {
@@ -814,6 +865,15 @@ header>nav>ul>li, header>nav>ul {
     .tab label {
         font-size: 17px;
     }
+
+#contact>article>form{
+    margin: 5px;
+    width: 95%;
+}
+
+    #contact>article>img{
+    width: 75%;
+}
 }
 
 @media screen and (max-width: 376px) {
