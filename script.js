@@ -1,23 +1,11 @@
-//Responsivess navigation
-function nav(){
-    var nav = document.querySelector("nav");
-    var checkBox = document.querySelector("#bars");
+var menu = document.querySelector('nav');
 
-    if (checkBox.checked == true) {
-        nav.style.visibility = "visible";
-        document.documentElement.style.overflow = 'hidden';
-    } else {
-        nav.style.visibility = "hidden";
-        document.documentElement.style.overflowY = 'auto';
-    }
-    nav.addEventListener('click', function() {
-        nav.style.visibility = "hidden";
-        checkBox.checked = false;
-        document.documentElement.style.overflowY = 'auto';
-    });
-    
+//Responsive Menu
+function menuShow() {
+    menu.classList.contains('open') 
+    ? menu.classList.remove('open')
+    : menu.classList.add('open')
 }
-
 //Slider buttons:
 const swiper = new Swiper('.swiper', {
     direction: 'vertical',

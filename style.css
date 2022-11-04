@@ -783,19 +783,6 @@ header>nav>ul>li, header>nav>ul {
         padding: 15px;
     }
 
-    label{
-        z-index: 1;
-    }
-
-    nav{
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100vw;
-    }
-
     header>nav>ul>li {
         position: absolute;
         min-width: 200px;
@@ -812,6 +799,22 @@ header>nav>ul>li, header>nav>ul {
         z-index: 1;
     }
 
+    nav>ul{
+        transition: all 0.3s ease;
+    }
+
+    nav{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+    }
+
+    .open{
+        display: block;
+    }
+
     header>nav>ul>li>a{
         font-size: 2.5rem;
         text-transform: uppercase;
@@ -826,9 +829,14 @@ header>nav>ul>li, header>nav>ul {
         display: none;
     }
 
-    .hamburguer,.globe {
+    .globe {
         display: block;
         font-size: 2rem;
+    }
+
+    .menu-btn{
+        z-index: 99;
+        cursor: pointer;
     }
 
     #welcome{
