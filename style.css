@@ -30,7 +30,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -51,6 +51,7 @@ ul {
 
 ul>li {
     display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
 }
 
@@ -83,6 +84,10 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 .element{
     position: absolute;
     z-index: -1;
+}
+
+.menu-btn{
+    display: none;
 }
 
 .background{
@@ -160,11 +165,8 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 }
 
 /*Independents:*/
-.checkbox, .hamburguer {
-    display: none;
-}
 
-.globe, .hamburguer {
+.globe {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
@@ -176,10 +178,6 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
     color: var(--purple);
     transform: translateY(-3px);
     transition: all 200ms ease;
-}
-
-.checkbox:checked + .hamburguer>i{
-    color: var(--purple);
 }
 
 .left>div>button:hover, .tag>button:hover, #submit:hover {
@@ -564,6 +562,13 @@ header>nav>ul>li, header>nav>ul {
 }
 
 /*Projects*/
+#projects{
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 #projects>section>article{
     display: flex;
     width: 100%;
@@ -768,9 +773,38 @@ header>nav>ul>li, header>nav>ul {
 }
 
 #contact>article>img{
-    width: 50%;
+    width: 40%;
+    margin: 0px 30px;
 }
 
+/*Footer:*/
+footer{
+    border: solid #262333 1px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer article{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Pt-Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+footer img{
+    width: 40px;
+}
 
 /*Queries:*/
 @media screen and (max-width: 770px) {
@@ -780,15 +814,15 @@ header>nav>ul>li, header>nav>ul {
 
     header{
         justify-content: space-between;
-        padding: 15px;
+        padding: 15px 25px;
     }
 
     header>nav>ul>li {
         position: absolute;
         min-width: 200px;
+        top: 0;
         width: 100vw;
         height: 100vh;
-        top: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -835,6 +869,9 @@ header>nav>ul>li, header>nav>ul {
     }
 
     .menu-btn{
+        color: white;
+        font-size: 2rem;
+        display: block;
         z-index: 99;
         cursor: pointer;
     }
@@ -901,22 +938,22 @@ header>nav>ul>li, header>nav>ul {
     }
 
     .tag {
-    width: 90%;
-    padding-right: 0px;
+        width: 90%;
+        padding-right: 0px;
     }
 
     .tab label {
         font-size: 17px;
     }
 
-#contact>article>form{
-    margin: 5px;
-    width: 95%;
-}
+    #contact>article>form{
+        margin: 5px;
+        width: 95%;
+    }
 
     #contact>article>img{
-    width: 75%;
-}
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 376px) {

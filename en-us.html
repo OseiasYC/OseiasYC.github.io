@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" id="hello">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oseias Lopes</title>
+    <script src="https://kit.fontawesome.com/3d294240d4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="circle"></div>
+    <a href="#hello"><i class="fa-solid fa-caret-up" id="to_top"></i></a>
+
+    <header>
+        <img src="img/logo.png" alt="logo">
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="index.html" class="globe"><i class="fa-solid fa-earth-americas" style="color: var(--purple);"></i></a>
+        <div class="menu-btn" onclick="menuShow()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="welcome" class="main">
+            <article class="left" data-aos="fade-right" data-aos-duration="2000">
+                <h1>Hello, world!, Nice, I'm <br> <span>Oseias Lopes</span>.</h1>
+                <h2>Resilient student, fascinated by Technology, Programming and Design. Graduating in <span
+                        style="color:var(--pink)">Software Engineering</span>.</h2>
+                <div>
+                    <button onclick="window.location.href='page2.html'">Download CV</button>
+                </div>
+
+                <ul class="contact">
+                    <li><a href="https://facebook.com/OseiasYC" target="_blank">
+                            <i class="fa-brands fa-facebook-square"></i>
+                        </a>
+                        <a href="https://github.com/OseiasYC" target="_blank">
+                            <i class="fa-brands fa-github-square"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/OseiasYC/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:Oseias.YC@gmail.com" target="_blank">
+                            <i class="fa-solid fa-square-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="right" data-aos="fade-up-left" data-aos-duration="1500">
+                <img src="img/oseias.png" alt="Oseias Lopes">
+            </article>
+        </section>
+
+        <section id="about" class="main">
+            <div class="element" id="rocket"><i class="fa-solid fa-rocket" data-aos="fade-up-right"
+                    data-aos-duration="3000"></i></div>
+            <article data-aos="fade-up" data-aos-duration="2000">
+                <h2>Greetings!</h2>
+                <h1 class="title">I'm Oseias, bachelor student in Software Engineering.</h1>
+                <p>I'm 19, brazilian, living in Salvador-BA. Most of my knowledge is based on my
+                autonomy, because many of them are not certified, however, I will be finishing my graduation in
+                2024<br>I'm looking for opportunities that guarantee good, healthy and frequent experiences. I'm willing to collaborate if that
+                guaranteed - focusing on plans for the future.<br><br><span id="letter"><a href="#">Click here</a></span>
+                    to read my Cover Letter and collaborate with the evolution of my career!
+                    <br><br>😉
+                </p>
+            </article>
+            <div class="element" data-aos="fade-down-left" data-aos-duration="2000" id="satellite"><i
+                    class="fa-solid fa-satellite"></i></div>
+        </section>
+
+        <div class="background" id="services">
+            <section class="main" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                <h1 class="title" id="title" style="text-align: center;">Why me?</h1>
+                <h2 class="subtitle">studies and experiences</h2>
+                <div class="element" id="meteor"><i class="fa-solid fa-meteor" data-aos="fade-down-left"
+                        data-aos-duration="3000"></i></div>
+                <article>
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <article>
+                            <h1>Comunicação:</h1>
+                            <p class="paragraph">Além do óbvio português nativo: eu falo e tenho muito contato com o
+                                inglês, sou intermediário na leitura,
+                                conversação e escrita.</p>
+                        </article>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-terminal"></i>
+                        <article>
+                            <h1>Desenvolvimento:</h1>
+                            <p class="paragraph">Às tendências, tecnologias sempre têm algo novo a ensinar. Meu foco
+                                principal é o leque Java para Desenvolvimento Web, Android, JUnit, DevOps etc. Estou
+                                disposto às novas descobertas.</p>
+                        </article>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <article>
+                            <h1>UX/UI Design:</h1>
+                            <p class="paragraph">Um misto da paixão às imagens, vídeos, fotografias, e prototipações. Eu
+                                as expresso com Figma, Adobe Creative Cloud e Front-End.</p>
+                        </article>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code-fork"></i>
+                        <article>
+                            <h1>Documentação & Versionamento:</h1>
+                            <p class="paragraph">Tenho contato e práticas com muitas normas, o suficiente para ter
+                                autonomia. Git e formatação de documentos refletem minha precaução e organização.</p>
+                        </article>
+                    </div>
+                    <p id="desc">Acompanhe meu <span><a href="http://github.com/OseiasYC"
+                                target="_blank">Github</a></span> para ver algumas das minhas principais tecnologias de
+                        estudo e trabalho constante;
+                        introdutórios ou outros não, eu sempre aprenderei algo novo consigo.</p>
+                </article>
+            </section>
+        </div>
+
+        <section id="friends" class="main" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000">
+            <h1 class="title" id="title" style="text-align: center;">Depoimentos</h1>
+            <h2 class="subtitle">colegas e testemunhas</h2>
+            <article>
+                <div class="card" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="img/harrison.jpg" alt="harrison">
+                    <h1>Harrison Borges</h1>
+                    <h2>amigo</h2>
+                    <p>"As perguntas que Oseias soube me responder: me deram perspectivas que sequer passaram por minha
+                        cabeça. Quando ele sabe e assume a liderança: temos resultado".</p>
+                    <ul>
+                        <li><a href="https://github.com/HarrisonBorgess" target="_blank"><i
+                                    class="fa-brands fa-github-square"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/harrisonborges" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="mailto:harrisonborges13@gmail.com" target="_blank"><i
+                                    class="fa-solid fa-square-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="img/harrison.jpg" alt="harrison">
+                    <h1>Bruno Nogueira</h1>
+                    <h2>ex-professor</h2>
+                    <p>"As perguntas que Oseias soube me responder, me deram perspectivas que sequer passaram por minha
+                        cabeça. Quando
+                        ele sabe e assume a liderança: temos resultado."</p>
+                    <ul>
+                        <li><a href="https://github.com/HarrisonBorgess" target="_blank"><i
+                                    class="fa-brands fa-github-square"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/harrisonborges" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="mailto:harrisonborges13@gmail.com" target="_blank"><i
+                                    class="fa-solid fa-square-envelope"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="img/harrison.jpg" alt="harrison">
+                    <h1>Harrison Borges</h1>
+                    <h2>amigo</h2>
+                    <p>"As perguntas que Oseias soube me responder: me deram perspectivas que sequer passaram por minha
+                        cabeça. Quando
+                        ele sabe e assume a liderança: temos resultado."</p>
+                    <ul>
+                        <li><a href="https://github.com/HarrisonBorgess" target="_blank"><i
+                                    class="fa-brands fa-github-square"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/harrisonborges" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="mailto:harrisonborges13@gmail.com" target="_blank"><i
+                                    class="fa-solid fa-square-envelope"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <div class="bubble"
+                style="left: -125px; top: 15%; width: 375px; height: 375px; background-color: var(--tPurple); animation: float 3s infinite alternate-reverse;">
+            </div>
+            <div class="bubble"
+                style="right: -50px; top: 60%; width: 300px; height: 300px; background-color: var(--pink); animation: float 6s infinite alternate-reverse;">
+            </div>
+        </section>
+
+        <section id="companies" class="main">
+            <h1 class="title" id="title" style="text-align: center;">Empresas & Clientes</h1>
+            <h2 class="subtitle">meu histórico</h2>
+            <article>
+                <div class="company"><img src="img/companies/monsters-inc.png" alt=""></div>
+                <div class="company"><img src="img/companies/shield.png" alt=""></div>
+                <div class="company"><img src="img/companies/stark.png" alt=""></div>
+                <div class="company"><img src="img/companies/umbrella.png" alt=""></div>
+                <div class="company"><img src="img/companies/wayne.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+                <div class="company"><img src="img/companies/default-pt.png" alt=""></div>
+            </article>
+        </section>
+
+        <div class="background" id="projects">
+            <section class="main">
+                <h1 class="title" id="title" style="text-align: center;">Meus projetos</h1>
+                <h2 class="subtitle">portfólio</h2>
+                <article>
+                    <button onclick="swiper.slidePrev()" class="swiper-button"><i
+                            class="fa-solid fa-caret-left"></i></button>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="pic"><img src="img/projects/portfolio.png" alt=""></div>
+                                <div class="tag">
+                                    <h1>Meu portfólio</h1>
+                                    <h2 class="subtitle">HTML, CSS e JS</h2>
+                                    <p class="paragraph">Idealizado durante muito tempo e após 3 versões de teste e
+                                        estudos: você está num projeto vanilla atualizado e autoral.</p>
+                                    <button
+                                        onclick="window.open('https://github.com/OseiasYC/OseiasYC.github.io', '_blank');">CONFERIR<i
+                                            class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pic"><img src="img/projects/g-data.png" alt=""></div>
+                                <div class="tag">
+                                    <h1>Vacinômetro</h1>
+                                    <h2 class="subtitle">Google Data Studio e Google Sheets</h2>
+                                    <p class="paragraph">Um dashboard de gráfico e mapa interativo com dados brasileiros
+                                        de contágio, mortes e vacinações por COVID-19.</p>
+                                    <button
+                                        onclick="window.open('https://datastudio.google.com/reporting/39c32f92-0c57-45b5-9be0-e6f2b825cec6', '_blank');">Conferir
+                                        <i class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pic"><img src="img/projects/java.png" alt=""></div>
+                                <div class="tag">
+                                    <h1>Just Java</h1>
+                                    <h2 class="subtitle">Java e utilitários</h2>
+                                    <p class="paragraph">Projetos como: JUnit, SpringBoot, conversores, estruturação de
+                                        dados, etc.</p>
+                                    <button onclick="window.open('https://github.com/OseiasYC', '_blank');">Conferir <i
+                                            class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="swiper.slideNext()" class="swiper-button"><i
+                            class="fa-solid fa-caret-right"></i></i></button>
+                    <div class="swiper-pagination"></div>
+                </article>
+            </section>
+        </div>
+
+        <section id="faq" class="main">
+            <h1 class="title" id="title" style="text-align: center;">FAQ de Entrevistas</h1>
+            <h2 class="subtitle">perguntas de entrevista</h2>
+            <article>
+                <div class="wrapper">
+                    <div class="half">
+                        <div class="tab">
+                            <input id="tab-one" type="checkbox" name="tabs">
+                            <label for="tab-one">Por que devemos te contratar?</label>
+                            <div class="tab-content">
+                                <p>Por que não? Talvez seja vantajoso contratar alguém muito iniciante, a empresa pode
+                                    habituá-lo aos moldes dela. Se (de forma saudável) vocês estiverem dispostos a me
+                                    ensinar, eu estarei também estarei disposto a aprender.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <input id="tab-two" type="checkbox" name="tabs">
+                            <label for="tab-two">Você trabalha bem em equipe?</label>
+                            <div class="tab-content">
+                                <p>Baseado na vida acadêmica: sim! Geralmente, eu as lidero por dar a introdução, e das
+                                    vezes que eu fui liderado: eu me esforçava para fazer o que me foi atribuído.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <input id="tab-three" type="checkbox" name="tabs">
+                            <label for="tab-three">Como você era no ensino médio?</label>
+                            <div class="tab-content">
+                                <p>Tinha as notas mais altas da escola, e era requerido como líder do colegiado ou de
+                                    classe; resultado de ser sociável e conveniente nos grupos.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <input id="tab-four" type="checkbox" name="tabs">
+                            <label for="tab-four">Quais seus pontos fortes e fracos?</label>
+                            <div class="tab-content">
+                                <p>Eu sou muito dedicado e persistente se for bem guiado; por ser metódico e organizado:
+                                    eu gosto de fazer bem feito e de
+                                    forma criativa. Já em fraqueza, tendo a ficar frustrado e desanimado se as coisas
+                                    saem do meu controle - é algo que
+                                    estou lidando.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <input id="tab-five" type="checkbox" name="tabs">
+                            <label for="tab-five">Quais seus objetivos na empresa?</label>
+                            <div class="tab-content">
+                                <p>Eu quero aprender e conviver no meu mercado de trabalho. Só assim para adquirir mais
+                                    conhecimento e experiência.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <input id="tab-six" type="checkbox" name="tabs">
+                            <label for="tab-six">Quais seus planos a longo prazo?</label>
+                            <div class="tab-content">
+                                <p>Terminar os estudos com um doutorado, trabalhando com automações industriais ou
+                                    DevOps fora do país (Canadá) para melhorar meus idiomas. Ou trabalhar para a Polícia
+                                    Federal ou agência de inteligência brasileira.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <input id="tab-seven" type="checkbox" name="tabs">
+                            <label for="tab-seven">O que você procura no emprego?</label>
+                            <div class="tab-content">
+                                <p>Se eu estou "open to work", atualmente, eu estou buscando uma oportunidade de estágio
+                                    presencial em Salvador-BA, ou podemos negociar algo.</p>
+                            </div>
+                        </div>
+                    </div>
+            </article>
+        </section>
+
+        <section id="contact" class="main">
+            <h1 class="title">Contate-me</h1>
+            <p class="subtitle">envia um email</p>
+            <article>
+                <form action="https://formsubmit.co/Oseias.YC@gmail.com" method="POST">
+                    <input type="text" name="name" required placeholder="Nome" id="name">
+                    <input type="email" name="email" required placeholder="E-mail" id="email">
+                    <input type="subject" name="_subject" placeholder="Assunto" id="subject">
+                    <textarea name="message" id="text" placeholder="Mensagem"></textarea>
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" value="https://OseiasYC.github.io">
+                    <button type="submit" id="submit">Enviar</button>
+                </form>
+                <img src="img/shuttle.png" alt="laptop">
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <article>
+            <img src="img/logo.png" alt="logo">
+            <p>Oseias Lopes</p>
+            <p>YC © 2023</p>
+        </article>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+<style>
+    .left>div::after{
+        content: 'Not open to work';
+    }
+</style>
+</html>

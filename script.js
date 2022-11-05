@@ -1,10 +1,16 @@
 var menu = document.querySelector('nav');
-
+var btn = document.querySelector(".menu-btn > i");
 //Responsive Menu
 function menuShow() {
-    menu.classList.contains('open') 
-    ? menu.classList.remove('open')
-    : menu.classList.add('open')
+    if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        btn.style.color = '#fff';
+        document.documentElement.style.overflow = 'auto';
+    }else{
+        menu.classList.add('open');
+        btn.style.color = '#c64dff';
+        document.documentElement.style.overflow = 'hidden';
+    }
 }
 //Slider buttons:
 const swiper = new Swiper('.swiper', {
