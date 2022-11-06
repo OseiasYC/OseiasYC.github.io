@@ -44,9 +44,9 @@ function submited() {
         window.alert('You email was submited. When I view it: I will reply. Thank You!');
         window.location.replace("https://OseiasYC.github.io/en-us.html");
     }
-    if (window.location.href.match(/\/([^\/]+)\/?$/)[1] == 'index.html#thanks') {
+    if (window.location.href.match(/\/([^\/]+)\/?$/)[1] == '#thanks') {
         window.alert('Seu email foi enviado. Assim que eu vê-lo, eu o responderei. Obrigado!');
-        window.location.replace("https://OseiasYC.github.io/index.html");
+        window.location.replace("https://OseiasYC.github.io");
     }
 }
 
