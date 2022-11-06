@@ -298,7 +298,7 @@ header>nav>ul>li, header>nav>ul {
     font-family: "Karla", sans-serif;
 }
 .left>div::after {
-    content: "Fechado a trabalho";
+    content: "Not open to work";
     padding: 16.5px 25px 16.5px 35px;
     margin: 0px 0px 0px -25px;
     z-index: -1;
@@ -856,7 +856,6 @@ footer img{
 
     .title{
         font-size: 3rem;
-        padding: 0.4rem;
     }
 
     #to_top {

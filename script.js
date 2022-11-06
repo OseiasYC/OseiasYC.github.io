@@ -36,5 +36,9 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+function submited() {
+    window.alert("Email enviado!");
+}
+
 //Animate on scroll:
 AOS.init();
