@@ -1,5 +1,5 @@
 var menu = document.querySelector('nav');
-var option = document.querySelector('nav ul > li > a');
+var option = document.querySelector('nav ul > li');
 var btn = document.querySelector('.menu-btn > i');
 
 //Responsive menu:
@@ -15,7 +15,7 @@ function menuShow() {
     option.addEventListener('click', function() {
         menu.classList.remove('open');
         btn.style.color = '#fff';
-        document.documentElement.style.overflow = 'auto';
+        document.documentElement.style.overflow = 'visible';
     });
 }
 
