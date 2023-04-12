@@ -251,7 +251,7 @@ header>nav>ul>li, header>nav>ul {
 
 /*#Welcome*/
 .left {
-    max-width: 450px;
+    max-width: 475px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;

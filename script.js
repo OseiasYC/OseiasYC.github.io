@@ -7,6 +7,7 @@ function menuShow() {
     if (menu.classList.contains('open')) {
         menu.classList.remove('open');
         btn.style.color = '#fff';
+        document.documentElement.style.overflow = 'visible';
     }else{
         menu.classList.add('open');
         btn.style.color = '#c64dff';
