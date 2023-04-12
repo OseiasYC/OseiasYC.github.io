@@ -864,7 +864,13 @@ footer img{
     }
 
     #to_top {
-        display: none;
+        opacity: .25;
+        right: 30px;
+        bottom: 15px;
+    }
+
+    #to_top:hover {
+        opacity: 1;
     }
 
     .globe {
