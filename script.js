@@ -1,6 +1,7 @@
 var menu = document.querySelector('nav');
 var option = document.querySelector('nav ul > li');
 var btn = document.querySelector('.menu-btn > i');
+var toTop = document.querySelector('#to_top');
 
 //Responsive menu:
 function menuShow() {
@@ -8,16 +9,20 @@ function menuShow() {
         menu.classList.remove('open');
         btn.style.color = '#fff';
         document.documentElement.style.overflow = 'visible';
+        toTop.style.display = 'block';
     }else{
         menu.classList.add('open');
         btn.style.color = '#c64dff';
         document.documentElement.style.overflow = 'hidden';
+        toTop.style.display = 'none';
     }
     option.addEventListener('click', function() {
         menu.classList.remove('open');
         btn.style.color = '#fff';
         document.documentElement.style.overflow = 'visible';
+        toTop.style.display = 'block';
     });
+    
 }
 
 //Slider buttons:

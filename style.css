@@ -166,16 +166,14 @@ header>nav>ul>li>a:hover, #welcome>.left>.contact>li>a>i:hover {
 
 /*Independents:*/
 
-.globe {
-    color: white;
-    font-size: 1.5rem;
+.language > * {
+    width: 35px;
     cursor: pointer;
     transform: translateY(0px);
     transition: all 200ms ease;
 }
 
-.globe:hover {
-    color: var(--purple);
+.language:hover {
     transform: translateY(-3px);
     transition: all 200ms ease;
 }
@@ -831,7 +829,8 @@ footer img{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 4rem;
         background: rgba(38, 35, 51, 0.35);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(13.5px);
@@ -873,7 +872,7 @@ footer img{
         opacity: 1;
     }
 
-    .globe {
+    .language {
         display: block;
         font-size: 2rem;
     }
